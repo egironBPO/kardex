@@ -8,6 +8,7 @@
     'price': '48.99',
     'currency': 'USD',
     'website': '',
+    'license': 'LGPL-3',
     'depends': ['stock', 'point_of_sale'],
     'data': [
         'security/ir.model.access.csv',
