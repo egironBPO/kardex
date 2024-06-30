@@ -1,0 +1,32 @@
+<odoo>
+    <!-- Definición de la vista del wizard -->
+    <record id="view_product_kardex_wizard_form" model="ir.ui.view">
+        <field name="name">product.kardex.wizard.form</field>
+        <field name="model">product.kardex.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="product_id"/>
+                    <field name="date_start"/>
+                    <field name="date_end"/>
+                    <field name="pos_id"/>
+                </group>
+                <group>
+                    <field name="remaining_qty" readonly="1"/>
+                </group>
+                <footer>
+                    <button string="Ver Kardex" type="object" name="action_view_kardex" class="btn-primary"/>
+                    <button string="Cancelar" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Acción del wizard -->
+    <record id="action_product_kardex_wizard" model="ir.actions.act_window">
+        <field name="name">Product Kardex Wizard</field>
+        <field name="res_model">product.kardex.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

@@ -1,0 +1,12 @@
+<!-- <odoo>
+    Menú principal de Kardex
+    <menuitem id="menu_kardex_root" name="Kardex" sequence="10"/>
+
+    Menú del wizard de Kardex
+    <menuitem id="menu_product_kardex_wizard" name="Product Kardex" parent="menu_kardex_root" action="action_product_kardex_wizard"/>
+</odoo> -->
+
+<odoo>
+    <menuitem id="menu_kardex_root" name="Kardex" sequence="10" groups="base.group_system"/>
+    <menuitem id="menu_product_kardex_wizard" name="Product Kardex" parent="menu_kardex_root" action="action_product_kardex_wizard" groups="base.group_system"/>
+</odoo>
