@@ -40,6 +40,7 @@ class ProductKardexWizard(models.TransientModel):
 
         remaining_qty = 0
         for move in stock_moves:
+            move_type = None  # Inicializa move_type con un valor predeterminado
             if move.location_dest_id.usage == 'internal' and move.location_id.usage != 'internal':
                 # Movimiento de entrada
                 remaining_qty += move.product_uom_qty
@@ -48,17 +49,20 @@ class ProductKardexWizard(models.TransientModel):
                 # Movimiento de salida
                 remaining_qty -= move.product_uom_qty
                 move_type = 'out'
-            TempKardexLine.create({
-                'product_id': move.product_id.id,
-                'date': move.date,
-                'location_id': move.location_id.id,
-                'location_dest_id': move.location_dest_id.id,
-                'product_uom_qty': move.product_uom_qty,
-                'remaining_qty': remaining_qty,
-                'reference': move.reference,
-                'picking_id': move.picking_id.id,
-                'type': move_type,
-            })
+            
+            # Solo crea el registro si move_type fue asignado
+            if move_type:
+                TempKardexLine.create({
+                    'product_id': move.product_id.id,
+                    'date': move.date,
+                    'location_id': move.location_id.id,
+                    'location_dest_id': move.location_dest_id.id,
+                    'product_uom_qty': move.product_uom_qty,
+                    'remaining_qty': remaining_qty,
+                    'reference': move.reference,
+                    'picking_id': move.picking_id.id,
+                    'type': move_type,
+                })
 
         return {
             'name': 'Movimientos de Kardex',
