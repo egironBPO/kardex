@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kardex de Productos</title>
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -97,6 +102,28 @@
         .fa-social:hover {
             color: #148963;
         }
+
+        /* Swiper Custom Styles */
+        .swiper-container {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .swiper-slide {
+            background: #fff;
+            /* Center slide text vertically */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
     </style>
 </head>
 
@@ -114,7 +141,8 @@
         <div class="col-md-12">
             <h2 class="oe_slogan" style="font-size: 25px;color:#000000;">
                 <b>
-                    Gestiona los movimientos de Kardex de un producto con facilidad. Controla inventarios y visualiza reportes en tiempo real. Compatible con Odoo 15 y 16.
+                    Gestiona los movimientos de Kardex de un producto con facilidad. Controla inventarios y visualiza reportes en
+                    tiempo real. Compatible con Odoo 15 y 16.
                 </b>
             </h2>
         </div>
@@ -150,13 +178,37 @@
         </div>
     </section>
 
-    <!-- Section 5: Screenshots -->
+    <!-- Section 5: Screenshots with Slider -->
     <section class="oe_container">
         <div class="oe_row oe_spaced">
             <div class="oe_span12">
                 <h3 class="oe_slogan">Capturas de Pantalla del Módulo</h3>
-                <div class="oe_demo oe_picture oe_screenshot">
-                    <img src="fondoo.png" alt="Kardex screenshot 1" style="height:400px;">
+                <!-- Swiper -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="fondoo.png" alt="Kardex screenshot 1" style="height:400px;">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="2.png" alt="Kardex screenshot 2" style="height:400px;">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="3.png" alt="Kardex screenshot 3" style="height:400px;">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="4.png" alt="Kardex screenshot 3" style="height:400px;">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="5.png" alt="Kardex screenshot 3" style="height:400px;">
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Navigation -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </div>
         </div>
@@ -184,6 +236,30 @@
     <!-- Separators -->
     <hr style="background: #148963;">
     <hr style="background: #2C0091;">
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true, // Habilita el bucle infinito
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 5000, // Tiempo entre slides en milisegundos
+                disableOnInteraction: false,
+            },
+            slidesPerView: 1, // Número de slides visibles
+            spaceBetween: 30, // Espacio entre slides en píxeles
+        });
+    </script>
 
 </body>
 
