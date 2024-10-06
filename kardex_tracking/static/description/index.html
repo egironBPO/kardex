@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kardex Tracking Module</title>
+    <title>Kardex de Productos</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -15,189 +15,176 @@
             line-height: 1.6;
         }
 
-        .container {
-            max-width: 1200px;
+        .oe_container {
+            padding: 50px 20px;
             margin: 0 auto;
-            padding: 20px;
+            max-width: 1200px;
         }
 
-        h1, h2 {
-            color: #4a4a8c;
-            font-weight: 700;
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
+        .oe_dark {
+            background-color: #2C0091;
+            color: white;
             text-align: center;
+            padding: 50px 20px;
         }
 
-        h2 {
-            font-size: 1.75rem;
-            margin-top: 30px;
-            margin-bottom: 15px;
+        .oe_slogan {
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .oe_row {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .oe_spaced {
+            margin-bottom: 50px;
+        }
+
+        h3, h4 {
+            font-size: 28px;
+            color: #332c3c;
             text-align: center;
-        }
-
-        p, li {
-            font-size: 1.1rem;
-            color: #555;
-        }
-
-        ul {
-            list-style-type: disc;
-            padding-left: 40px;
         }
 
         a {
-            color: #4a4a8c;
+            color: #FFFFFF !important;
             text-decoration: none;
-            font-weight: 500;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .fa {
+            font-size: 25px;
+            color: CRIMSON;
+            margin-right: 10px;
         }
 
-        .odoo-section {
-            background-color: #fff;
-            margin-bottom: 30px;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .tab-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        .tab {
-            margin: 0 10px;
-            padding: 10px 20px;
+        img {
+            max-width: 100%;
             border-radius: 5px;
-            background-color: #e6e6f0;
-            color: #4a4a8c;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px;
+            background-color: #9c676e;
+            border-color: #005ca7;
+            color: white;
             font-weight: bold;
-            text-transform: uppercase;
+            border-radius: 0;
+            text-align: center;
             cursor: pointer;
         }
 
-        .tab:hover {
-            background-color: #4a4a8c;
-            color: white;
+        .button:hover {
+            background-color: #005ca7;
         }
 
-        .active-tab {
-            background-color: #4a4a8c;
-            color: white;
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        .odoo-section img {
-            display: block;
-            margin: 20px auto;
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-
-        footer {
-            background-color: #4a4a8c;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        footer p {
+        hr {
+            width: 100%;
+            height: 4px;
             margin: 0;
+        }
+
+        .fa-social {
+            font-size: 38px;
+            margin: 20px 10px;
+            color: #2C0091;
+        }
+
+        .fa-social:hover {
+            color: #148963;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Kardex Tracking Module</h1>
 
-        <section class="odoo-section">
-            <h2>Overview</h2>
-            <p>
-                El módulo <strong>Kardex Tracking</strong> está diseñado para ayudar a las empresas a gestionar de manera eficiente su inventario y rastrear el movimiento de productos en tiempo real. Este módulo proporciona una interfaz fácil de usar para visualizar el historial de movimientos de productos, generar informes de inventario y optimizar los procesos logísticos.
-            </p>
-        </section>
-
-        <div class="tab-container">
-            <div class="tab active-tab" onclick="showTab('features')">Features</div>
-            <div class="tab" onclick="showTab('screenshots')">Screenshots</div>
-            <div class="tab" onclick="showTab('faq')">FAQ</div>
-            <div class="tab" onclick="showTab('install')">Installation</div>
+    <!-- Section 1: Header -->
+    <section class="oe_container oe_dark">
+        <div class="col-md-12">
+            <h2 class="oe_slogan">Kardex de Productos</h2>
         </div>
+    </section>
 
-        <!-- Características -->
-        <section id="features" class="odoo-section tab-content active">
-            <h2>Características principales</h2>
-            <ul>
-                <li>Seguimiento de movimientos de productos (entradas y salidas).</li>
-                <li>Opciones avanzadas de filtrado y búsqueda.</li>
-                <li>Integración con otros módulos de inventario y contabilidad en Odoo.</li>
-            </ul>
-        </section>
+    <!-- Section 2: Overview -->
+    <section class="oe_container">
+        <div class="col-md-12">
+            <h2 class="oe_slogan" style="font-size: 25px;color:#000000;">
+                <b>
+                    Gestiona los movimientos de Kardex de un producto con facilidad. Controla inventarios y visualiza reportes en tiempo real. Compatible con Odoo 15 y 16.
+                </b>
+            </h2>
+        </div>
+    </section>
 
-        <!-- Capturas de pantalla -->
-        <section id="screenshots" class="odoo-section tab-content">
-            <h2>Capturas de pantalla</h2>
-            <img src="banner.gif" alt="Vista del módulo Kardex Tracking">
-            <p>Captura de pantalla del módulo en acción.</p>
-        </section>
+    <!-- Section 3: Call to Action -->
+    <section class="oe_container">
+        <div class="oe_row oe_spaced">
+            <div class="oe_centeralign oe_websiteonly">
+                <h4 class="oe_slogan">
+                    <a href="https://tusitio.com" class="button" target="_blank">
+                        <i class="fa fa-cart-plus"></i> Compra Ahora por $29.99
+                    </a>
+                </h4>
+            </div>
+        </div>
+    </section>
 
-        <!-- Preguntas frecuentes -->
-        <section id="faq" class="odoo-section tab-content">
-            <h2>FAQ</h2>
-            <p><strong>¿Este módulo es compatible con todas las versiones de Odoo?</strong></p>
-            <p>Sí, el módulo es compatible con las versiones 15.0 y 16.0 de Odoo.</p>
-            <p><strong>¿Puedo integrar este módulo con otros módulos de Odoo?</strong></p>
-            <p>Sí, Kardex Tracking se integra perfectamente con otros módulos de inventario y contabilidad de Odoo.</p>
-        </section>
+    <!-- Section 4: Features List -->
+    <section class="oe_container">
+        <div class="oe_row oe_spaced">
+            <div style="text-align:center;">
+                <p class="fa fa-hand-o-right">
+                    <span style="color:#2dd280;font-size: 15px;">Visualiza movimientos de productos fácilmente.</span>
+                </p><br/>
+                <p class="fa fa-hand-o-right">
+                    <span style="color:#2dd280;font-size: 15px;">Filtra movimientos por fechas y almacenes.</span>
+                </p><br/>
+                <p class="fa fa-hand-o-right">
+                    <span style="color:#2dd280;font-size: 15px;">Genera reportes detallados de inventario.</span>
+                </p><br/>
+            </div>
+        </div>
+    </section>
 
-        <!-- Instalación -->
-        <section id="install" class="odoo-section tab-content">
-            <h2>Instalación</h2>
-            <p>
-                Para instalar el módulo <strong>Kardex Tracking</strong>, simplemente descarga el archivo desde la App Store de Odoo y sigue los pasos estándar de instalación del módulo en tu instancia de Odoo.
-            </p>
-        </section>
-    </div>
+    <!-- Section 5: Screenshots -->
+    <section class="oe_container">
+        <div class="oe_row oe_spaced">
+            <div class="oe_span12">
+                <h3 class="oe_slogan">Capturas de Pantalla del Módulo</h3>
+                <div class="oe_demo oe_picture oe_screenshot">
+                    <img src="static/description/screenshot_1.png" alt="Kardex screenshot 1" style="height:400px;">
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <p>© 2024 Kardex Tracking Module | Todos los derechos reservados</p>
-    </footer>
+    <!-- Section 6: Support Info -->
+    <section class="oe_container oe_dark">
+        <div class="oe_row">
+            <div class="oe_slogan text-center">
+                <h3 style="color:#2C0091;font-size: 25px;">¿Tienes dudas? Contáctanos</h3>
+                <h3 style="color:#2C0091;font-size: 20px;">Email: <a href="mailto:egiron.valladares@gmail.com">egiron.valladares@gmail.com</a></h3>
+                <div class="oe_slogan">
+                    <a href="https://www.facebook.com/elder.giron" target="_blank">
+                        <i class="fa fa-facebook-square fa-social"></i>
+                    </a>
+                   
+                    <a href="https://walink.co/246584" target="_blank">
+                        <i class="fa fa-whatsapp fa-social"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script>
-        function showTab(tabId) {
-            var tabs = document.querySelectorAll('.tab');
-            var contents = document.querySelectorAll('.tab-content');
+    <!-- Separators -->
+    <hr style="background: #148963;">
+    <hr style="background: #2C0091;">
 
-            tabs.forEach(function(tab) {
-                tab.classList.remove('active-tab');
-            });
-
-            contents.forEach(function(content) {
-                content.classList.remove('active');
-            });
-
-            document.querySelector('#' + tabId).classList.add('active');
-            event.currentTarget.classList.add('active-tab');
-        }
-    </script>
 </body>
 
 </html>
