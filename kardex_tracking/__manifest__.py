@@ -16,7 +16,7 @@
         'views/kardex_tracking_views.xml'
     ],
     'images':['static/description/banner.gif'],
-    'images': ['static/description/screenshot_1.png'],
+    'images': ['static/description/img/screenshot_1.png'],
     'installable': True,
     'application': False,
     
