@@ -17,7 +17,9 @@
     ],
    'images': [
     'static/description/banner.gif',
-    'static/description/1.png'
+    'static/description/1.png',
+     'static/description/2.png',
+      'static/description/3.png'
     ],
     'installable': True,
     'application': False,
