@@ -22,19 +22,21 @@
         }
 
         h1, h2 {
-            color: #2a85d0;
+            color: #4a4a8c;
             font-weight: 700;
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 20px;
+            text-align: center;
         }
 
         h2 {
             font-size: 1.75rem;
             margin-top: 30px;
             margin-bottom: 15px;
+            text-align: center;
         }
 
         p, li {
@@ -48,7 +50,7 @@
         }
 
         a {
-            color: #2a85d0;
+            color: #4a4a8c;
             text-decoration: none;
             font-weight: 500;
         }
@@ -65,6 +67,42 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
+        .tab-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            margin: 0 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #e6e6f0;
+            color: #4a4a8c;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .tab:hover {
+            background-color: #4a4a8c;
+            color: white;
+        }
+
+        .active-tab {
+            background-color: #4a4a8c;
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
         .odoo-section img {
             display: block;
             margin: 20px auto;
@@ -74,7 +112,7 @@
         }
 
         footer {
-            background-color: #2a85d0;
+            background-color: #4a4a8c;
             color: #fff;
             padding: 20px;
             text-align: center;
@@ -88,16 +126,24 @@
 
 <body>
     <div class="container">
-        <!-- Descripción del módulo -->
+        <h1>Kardex Tracking Module</h1>
+
         <section class="odoo-section">
-            <h1>Kardex Tracking Module</h1>
+            <h2>Overview</h2>
             <p>
                 El módulo <strong>Kardex Tracking</strong> está diseñado para ayudar a las empresas a gestionar de manera eficiente su inventario y rastrear el movimiento de productos en tiempo real. Este módulo proporciona una interfaz fácil de usar para visualizar el historial de movimientos de productos, generar informes de inventario y optimizar los procesos logísticos.
             </p>
         </section>
 
-        <!-- Características principales -->
-        <section class="odoo-section">
+        <div class="tab-container">
+            <div class="tab active-tab" onclick="showTab('features')">Features</div>
+            <div class="tab" onclick="showTab('screenshots')">Screenshots</div>
+            <div class="tab" onclick="showTab('faq')">FAQ</div>
+            <div class="tab" onclick="showTab('install')">Installation</div>
+        </div>
+
+        <!-- Características -->
+        <section id="features" class="odoo-section tab-content active">
             <h2>Características principales</h2>
             <ul>
                 <li>Seguimiento de movimientos de productos (entradas y salidas).</li>
@@ -106,44 +152,27 @@
             </ul>
         </section>
 
+        <!-- Capturas de pantalla -->
+        <section id="screenshots" class="odoo-section tab-content">
+            <h2>Capturas de pantalla</h2>
+            <img src="banner.gif" alt="Vista del módulo Kardex Tracking">
+            <p>Captura de pantalla del módulo en acción.</p>
+        </section>
+
+        <!-- Preguntas frecuentes -->
+        <section id="faq" class="odoo-section tab-content">
+            <h2>FAQ</h2>
+            <p><strong>¿Este módulo es compatible con todas las versiones de Odoo?</strong></p>
+            <p>Sí, el módulo es compatible con las versiones 15.0 y 16.0 de Odoo.</p>
+            <p><strong>¿Puedo integrar este módulo con otros módulos de Odoo?</strong></p>
+            <p>Sí, Kardex Tracking se integra perfectamente con otros módulos de inventario y contabilidad de Odoo.</p>
+        </section>
+
         <!-- Instalación -->
-        <section class="odoo-section">
+        <section id="install" class="odoo-section tab-content">
             <h2>Instalación</h2>
             <p>
                 Para instalar el módulo <strong>Kardex Tracking</strong>, simplemente descarga el archivo desde la App Store de Odoo y sigue los pasos estándar de instalación del módulo en tu instancia de Odoo.
-            </p>
-        </section>
-
-        <!-- Uso del módulo -->
-        <section class="odoo-section">
-            <h2>¿Cómo usar este módulo?</h2>
-            <p>
-                Después de instalar el módulo, puedes acceder a las funcionalidades de Kardex Tracking desde el menú de inventario. Desde allí, tendrás acceso a los informes de movimientos de productos, así como a las herramientas para generar reportes detallados.
-            </p>
-        </section>
-
-        <!-- Capturas de pantalla -->
-        <section class="odoo-section">
-            <h2>Capturas de pantalla</h2>
-            <img src="banner.gif" alt="Vista del módulo Kardex Tracking">
-            <p>
-                Captura de pantalla del módulo en acción.
-            </p>
-        </section>
-
-        <!-- Compatibilidad -->
-        <section class="odoo-section">
-            <h2>Compatibilidad</h2>
-            <p>
-                Este módulo es compatible con las versiones de Odoo 15.0.
-            </p>
-        </section>
-
-        <!-- Soporte -->
-        <section class="odoo-section">
-            <h2>Soporte</h2>
-            <p>
-                Si tienes alguna duda o encuentras algún problema, puedes contactarnos por correo electrónico a <a href="mailto:egiron.valladares@gmail.com">egiron.valladares@gmail.com</a>. Estaremos encantados de ayudarte.
             </p>
         </section>
     </div>
@@ -151,6 +180,24 @@
     <footer>
         <p>© 2024 Kardex Tracking Module | Todos los derechos reservados</p>
     </footer>
+
+    <script>
+        function showTab(tabId) {
+            var tabs = document.querySelectorAll('.tab');
+            var contents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(function(tab) {
+                tab.classList.remove('active-tab');
+            });
+
+            contents.forEach(function(content) {
+                content.classList.remove('active');
+            });
+
+            document.querySelector('#' + tabId).classList.add('active');
+            event.currentTarget.classList.add('active-tab');
+        }
+    </script>
 </body>
 
 </html>
