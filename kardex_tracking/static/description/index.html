@@ -5,6 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kardex de Productos</title>
+    <!-- Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pf8mVt+7fjgHcOvWrC5p0N6e8w5f4O+NmXG4KYhFjlkFwpr2rj8dXPTsu94kH5ZkdA1q2jzP7mVx5hXnVf6FUw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Swiper CSS -->
     <link
       rel="stylesheet"
@@ -49,7 +57,8 @@
             margin-bottom: 50px;
         }
 
-        h3, h4 {
+        h3,
+        h4 {
             font-size: 28px;
             color: #332c3c;
             text-align: center;
@@ -124,6 +133,34 @@
             height: auto;
             object-fit: cover;
         }
+
+        /* Botón Flotante de WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128c7e;
+        }
+
+        .whatsapp-float i {
+            margin: 0;
+        }
     </style>
 </head>
 
@@ -167,13 +204,13 @@
             <div style="text-align:center;">
                 <p class="fa fa-hand-o-right">
                     <span style="color:#2dd280;font-size: 15px;">Visualiza movimientos de productos fácilmente.</span>
-                </p><br/>
+                </p><br />
                 <p class="fa fa-hand-o-right">
                     <span style="color:#2dd280;font-size: 15px;">Filtra movimientos por fechas y almacenes.</span>
-                </p><br/>
+                </p><br />
                 <p class="fa fa-hand-o-right">
                     <span style="color:#2dd280;font-size: 15px;">Genera reportes detallados de inventario.</span>
-                </p><br/>
+                </p><br />
             </div>
         </div>
     </section>
@@ -197,11 +234,11 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <img src="4.png" alt="Kardex screenshot 3" style="height:400px;">
+                            <img src="4.png" alt="Kardex screenshot 4" style="height:400px;">
                         </div>
 
                         <div class="swiper-slide">
-                            <img src="5.png" alt="Kardex screenshot 3" style="height:400px;">
+                            <img src="5.png" alt="Kardex screenshot 5" style="height:400px;">
                         </div>
                     </div>
                     <!-- Add Pagination -->
@@ -224,7 +261,7 @@
                     <a href="https://www.facebook.com/elder.giron" target="_blank">
                         <i class="fa fa-facebook-square fa-social"></i>
                     </a>
-                   
+
                     <a href="https://walink.co/246584" target="_blank">
                         <i class="fa fa-whatsapp fa-social"></i>
                     </a>
@@ -236,6 +273,11 @@
     <!-- Separators -->
     <hr style="background: #148963;">
     <hr style="background: #2C0091;">
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://walink.co/246584" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
