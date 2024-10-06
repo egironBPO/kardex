@@ -1,70 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kardex Tracking Module</title>
+    <title>Kardex de Productos</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .oe_container {
+            padding: 50px 20px;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .oe_dark {
+            background-color: #2C0091;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .oe_slogan {
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .oe_row {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .oe_spaced {
+            margin-bottom: 50px;
+        }
+
+        h3, h4 {
+            font-size: 28px;
+            color: #332c3c;
+            text-align: center;
+        }
+
+        a {
+            color: #FFFFFF !important;
+            text-decoration: none;
+        }
+
+        .fa {
+            font-size: 25px;
+            color: CRIMSON;
+            margin-right: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px;
+            background-color: #9c676e;
+            border-color: #005ca7;
+            color: white;
+            font-weight: bold;
+            border-radius: 0;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #005ca7;
+        }
+
+        hr {
+            width: 100%;
+            height: 4px;
+            margin: 0;
+        }
+
+        .fa-social {
+            font-size: 38px;
+            margin: 20px 10px;
+            color: #2C0091;
+        }
+
+        .fa-social:hover {
+            color: #148963;
+        }
+    </style>
 </head>
+
 <body>
-    <!-- Descripción del módulo -->
-    <section class="odoo-section">
-        <h1>Kardex Tracking Module</h1>
-        <p>
-            El módulo <strong>Kardex Tracking</strong> está diseñado para ayudar a las empresas a gestionar de manera eficiente su inventario y rastrear el movimiento de productos en tiempo real. Este módulo proporciona una interfaz fácil de usar para visualizar el historial de movimientos de productos, generar informes de inventario y optimizar los procesos logísticos.
-        </p>
+
+    <!-- Section 1: Header -->
+    <section class="oe_container oe_dark">
+        <div class="col-md-12">
+            <h2 class="oe_slogan">Kardex de Productos</h2>
+        </div>
     </section>
 
-    <!-- Características principales -->
-    <section class="odoo-section">
-        <h2>Características principales</h2>
-        <ul>
-            <li>Seguimiento de movimientos de productos (entradas y salidas).</li>
-            <li>Generación de informes detallados de inventario.</li>
-            <li>Soporte para múltiples almacenes y ubicaciones.</li>
-            <li>Opciones avanzadas de filtrado y búsqueda.</li>
-            <li>Integración con otros módulos de inventario y contabilidad en Odoo.</li>
-        </ul>
+    <!-- Section 2: Overview -->
+    <section class="oe_container">
+        <div class="col-md-12">
+            <h2 class="oe_slogan" style="font-size: 25px;color:#000000;">
+                <b>
+                    Gestiona los movimientos de Kardex de un producto con facilidad. Controla inventarios y visualiza reportes en tiempo real. Compatible con Odoo 15 y 16.
+                </b>
+            </h2>
+        </div>
     </section>
 
-    <!-- Instalación -->
-    <section class="odoo-section">
-        <h2>Instalación</h2>
-        <p>
-            Para instalar el módulo <strong>Kardex Tracking</strong>, simplemente descarga el archivo desde la App Store de Odoo y sigue los pasos estándar de instalación del módulo en tu instancia de Odoo.
-        </p>
+    <!-- Section 3: Call to Action -->
+    <section class="oe_container">
+        <div class="oe_row oe_spaced">
+            <div class="oe_centeralign oe_websiteonly">
+                <h4 class="oe_slogan">
+                    <a href="https://tusitio.com" class="button" target="_blank">
+                        <i class="fa fa-cart-plus"></i> Compra Ahora por $29.99
+                    </a>
+                </h4>
+            </div>
+        </div>
     </section>
 
-    <!-- Uso del módulo -->
-    <section class="odoo-section">
-        <h2>¿Cómo usar este módulo?</h2>
-        <p>
-            Después de instalar el módulo, puedes acceder a las funcionalidades de Kardex Tracking desde el menú de inventario. Desde allí, tendrás acceso a los informes de movimientos de productos, así como a las herramientas para generar reportes detallados.
-        </p>
+    <!-- Section 4: Features List -->
+    <section class="oe_container">
+        <div class="oe_row oe_spaced">
+            <div style="text-align:center;">
+                <p class="fa fa-hand-o-right">
+                    <span style="color:#2dd280;font-size: 15px;">Visualiza movimientos de productos fácilmente.</span>
+                </p><br/>
+                <p class="fa fa-hand-o-right">
+                    <span style="color:#2dd280;font-size: 15px;">Filtra movimientos por fechas y almacenes.</span>
+                </p><br/>
+                <p class="fa fa-hand-o-right">
+                    <span style="color:#2dd280;font-size: 15px;">Genera reportes detallados de inventario.</span>
+                </p><br/>
+            </div>
+        </div>
     </section>
 
-    <!-- Capturas de pantalla -->
-    <section class="odoo-section">
-        <h2>Capturas de pantalla</h2>
-        <img src="banner.gif" alt="Vista del módulo Kardex Tracking" style="max-width: 100%; height: auto;">
-        <p>
-            Captura de pantalla del módulo en acción.
-        </p>
+    <!-- Section 5: Screenshots -->
+    <section class="oe_container">
+        <div class="oe_row oe_spaced">
+            <div class="oe_span12">
+                <h3 class="oe_slogan">Capturas de Pantalla del Módulo</h3>
+                <div class="oe_demo oe_picture oe_screenshot">
+                    <img src="static/description/screenshot_1.png" alt="Kardex screenshot 1" style="height:400px;">
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Compatibilidad -->
-    <section class="odoo-section">
-        <h2>Compatibilidad</h2>
-        <p>
-            Este módulo es compatible con las versiones de Odoo 15.0.
-        </p>
+    <!-- Section 6: Support Info -->
+    <section class="oe_container oe_dark">
+        <div class="oe_row">
+            <div class="oe_slogan text-center">
+                <h3 style="color:#2C0091;font-size: 25px;">¿Tienes dudas? Contáctanos</h3>
+                <h3 style="color:#2C0091;font-size: 20px;">Email: <a href="mailto:egiron.valladares@gmail.com">egiron.valladares@gmail.com</a></h3>
+                <div class="oe_slogan">
+                    <a href="https://www.facebook.com/elder.giron" target="_blank">
+                        <i class="fa fa-facebook-square fa-social"></i>
+                    </a>
+                   
+                    <a href="https://walink.co/246584" target="_blank">
+                        <i class="fa fa-whatsapp fa-social"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Soporte -->
-    <section class="odoo-section">
-        <h2>Soporte</h2>
-        <p>
-            Si tienes alguna duda o encuentras algún problema, puedes contactarnos por correo electrónico a <a href="mailto:soporte@ejemplo.com">soporte@ejemplo.com</a>. Estaremos encantados de ayudarte.
-        </p>
-    </section>
+    <!-- Separators -->
+    <hr style="background: #148963;">
+    <hr style="background: #2C0091;">
+
 </body>
+
 </html>
