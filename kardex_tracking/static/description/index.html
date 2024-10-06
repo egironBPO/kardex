@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kardex de Productos</title>
+    <!-- Carga del CSS de Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
@@ -15,70 +16,93 @@
             padding: 0;
             line-height: 1.6;
         }
-
-        .slider {
-            position: relative;
-            max-width: 80%;
-            margin: auto;
-            overflow: hidden;
-            border-radius: 5px;
+        .oe_container {
+            padding: 50px 20px;
+            margin: 0 auto;
+            max-width: 1200px;
         }
-
-        .slides {
+        .oe_dark {
+            background-color: #2C0091;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .oe_slogan {
+            font-size: 35px;
+            font-weight: bold;
+        }
+        .oe_row {
             display: flex;
-            transition: transform 0.5s ease-in-out;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-
-        .slides img {
-            width: 100%;
+        .oe_spaced {
+            margin-bottom: 50px;
+        }
+        h3, h4 {
+            font-size: 28px;
+            color: #332c3c;
+            text-align: center;
+        }
+        a {
+            color: #FFFFFF;
+            text-decoration: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .fa {
+            font-size: 25px;
+            color: CRIMSON;
+            margin-right: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
             border-radius: 5px;
         }
-
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
+        .button {
+            display: inline-block;
+            padding: 15px;
+            background-color: #9c676e;
             color: white;
             font-weight: bold;
-            font-size: 18px;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            background-color: rgba(0,0,0,0.5);
-        }
-
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-
-        .prev:hover, .next:hover {
-            background-color: rgba(0,0,0,0.8);
-        }
-
-        .dot-container {
+            border-radius: 0;
             text-align: center;
-            padding: 10px;
-            background: #f4f6f9;
-        }
-
-        .dot {
             cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
+        }
+        .button:hover {
+            background-color: #005ca7;
+        }
+        hr {
+            width: 100%;
+            height: 4px;
+            margin: 0;
+        }
+        .fa-social {
+            font-size: 38px;
+            margin: 20px 10px;
+            color: #2C0091;
+            cursor: pointer;
+            display: inline-block; /* Asegura que el icono tenga espacio clicable */
+        }
+        .fa-social:hover {
+            color: #148963;
         }
 
-        .active, .dot:hover {
-            background-color: #717171;
-        }
+        .oe_mosaic {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px; /* Espacio entre las imágenes */
+}
 
+.oe_mosaic img {
+    width: 30%; /* Las imágenes ocuparán el 30% del contenedor para ajustarse en mosaico */
+    height: auto; /* Mantener la proporción de las imágenes */
+    border-radius: 5px; /* Bordes redondeados */
+}
     </style>
 </head>
 <body>
@@ -101,25 +125,49 @@
         </div>
     </section>
 
-    <!-- Section 5: Screenshots Slider -->
+    <!-- Section 3: Call to Action -->
     <section class="oe_container">
-        <div class="slider">
-            <div class="slides">
-                <img src="1.png" alt="Screenshot 1">
-                <img src="2.png" alt="Screenshot 2">
-                <img src="3.png" alt="Screenshot 3">
+        <div class="oe_row oe_spaced">
+            <div class="oe_centeralign oe_websiteonly">
+                <h4 class="oe_slogan">
+                    <a href="#" class="button" target="_blank">
+                        <i class="fa fa-cart-plus"></i> Compra Ahora por $29.99
+                    </a>
+                </h4>
             </div>
-            <!-- Controles -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-
-        <div class="dot-container">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
         </div>
     </section>
+
+    <!-- Section 4: Features List -->
+    <section class="oe_container">
+        <div class="oe_row oe_spaced">
+            <div style="text-align:center;">
+                <p class="fa fa-hand-o-right">
+                    <span style="color:#2dd280;font-size: 15px;">Visualiza movimientos de productos fácilmente.</span>
+                </p><br/>
+                <p class="fa fa-hand-o-right">
+                    <span style="color:#2dd280;font-size: 15px;">Filtra movimientos por fechas y almacenes.</span>
+                </p><br/>
+                <p class="fa fa-hand-o-right">
+                    <span style="color:#2dd280;font-size: 15px;">Genera reportes detallados de inventario.</span>
+                </p><br/>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Screenshots -->
+  
+             <!-- Section 5: Screenshots -->
+<section class="oe_container">
+    <h3 class="oe_slogan">Capturas de Pantalla del Módulo</h3>
+    <div class="oe_mosaic">
+        <img src="1.png" alt="Captura 1">
+        <img src="2.png" alt="Captura 2">
+        <img src="3.png" alt="Captura 3">
+    </div>
+</section>
+           
+   
 
     <!-- Section 6: Support Info -->
     <section class="oe_container oe_dark">
@@ -128,47 +176,26 @@
                 <h3 style="color:#2C0091;font-size: 25px;">¿Tienes dudas? Contáctanos</h3>
                 <h3 style="color:#2C0091;font-size: 20px;">Email: <a href="mailto:egiron.valladares@gmail.com">egiron.valladares@gmail.com</a></h3>
                 <div class="oe_slogan">
+                    <!-- Enlace a Facebook -->
                     <a href="https://www.facebook.com/elder.giron" target="_blank" style="color: #2C0091; text-decoration: none;">
-                        <i class="fa fa-facebook-square fa-social"></i>
+                        <i class="fa fa-facebook-square fa-social"></i> <!-- Ícono de Facebook -->
                     </a>
-                    <a href="https://wa.me/51987654321" target="_blank" style="color: #2C0091; text-decoration: none;">
-                        <i class="fa fa-whatsapp fa-social"></i>
+    
+                    <!-- Enlace a WhatsApp -->
+                    <a href="https://wa.me/51987654321" target="_blank" style="color: #2C0091; text-decoration: none;"> <!-- Reemplaza con tu número -->
+                        <i class="fa fa-whatsapp fa-social"></i> <!-- Ícono de WhatsApp -->
                     </a>
                 </div>
+            </div>
+
             </div>
         </div>
     </section>
 
+    <!-- Separators -->
     <hr style="background: #148963;">
     <hr style="background: #2C0091;">
 
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("slides")[0].children;
-            let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
-        }
-    </script>
 </body>
+
 </html>
