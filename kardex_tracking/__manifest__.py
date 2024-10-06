@@ -1,6 +1,6 @@
 {
     'name': 'Kardex de Productos',
-    'version': '15.0',
+    'version': '16.0',
     'summary': 'Wizard para visualizar movimientos de Kardex',
     'description': 'Este módulo permite visualizar los movimientos de Kardex de un producto en un rango de fechas.',
     'category': 'Inventory',
