@@ -15,8 +15,10 @@
         'views/menu_views.xml',
         'views/kardex_tracking_views.xml'
     ],
-    'images':['static/description/banner.gif'],
-    'images': ['static/description/img/screenshot_1.png'],
+   'images': [
+    'static/description/banner.gif',
+    'static/description/1.png'
+    ],
     'installable': True,
     'application': False,
     
