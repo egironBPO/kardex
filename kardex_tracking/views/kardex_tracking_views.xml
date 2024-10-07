@@ -1,20 +1,19 @@
 <odoo>
     <!-- Vista en árbol del modelo de Kardex -->
-    <record id="view_kardex_tracking_tree" model="ir.ui.view">
+     <record id="view_kardex_tracking_tree" model="ir.ui.view">
         <field name="name">kardex.tracking.tree</field>
         <field name="model">temp.kardex.line</field>
         <field name="arch" type="xml">
-            <tree>
+            <tree default_order="date asc">
                 <field name="product_id"/>
                 <field name="date"/>
                 <field name="location_id"/>
                 <field name="location_dest_id"/>
-                 <field name="type" string="Tipo"/>
+                <field name="type" string="Tipo"/>
                 <field name="product_uom_qty" string="Cantidad"/>
                 <field name="remaining_qty" string="Cantidad Restante"/>
                 <field name="reference"/>
                 <field name="picking_id"/>
-               
             </tree>
         </field>
     </record>

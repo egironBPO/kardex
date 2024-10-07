@@ -8,7 +8,7 @@
     'price': '29.99',
     'currency': 'USD',
     'website': '',
-    'depends': ['stock', 'point_of_sale'],
+    'depends': ['stock'],
     'data': [
         'security/ir.model.access.csv',
         'views/product_kardex_wizard_views.xml',

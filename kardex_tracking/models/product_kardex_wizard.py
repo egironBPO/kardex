@@ -7,7 +7,6 @@ class ProductKardexWizard(models.TransientModel):
     product_id = fields.Many2one('product.product', string='Producto', required=True)
     date_start = fields.Datetime(string='Fecha de Inicio', required=True)
     date_end = fields.Datetime(string='Fecha de Fin', required=True)
-    pos_id = fields.Many2one('pos.config', string='Punto de Venta')
     remaining_qty = fields.Float(string='Cantidad Restante', compute='_compute_remaining_qty', store=False)
 
     @api.depends('product_id', 'date_start', 'date_end')
@@ -31,8 +30,6 @@ class ProductKardexWizard(models.TransientModel):
             ('date', '<=', self.date_end),
             ('state', '=', 'done')
         ]
-        if self.pos_id:
-            domain.append(('picking_id.pos_session_id.config_id', '=', self.pos_id.id))
 
         stock_moves = self.env['stock.move'].search(domain)
         TempKardexLine = self.env['temp.kardex.line']
@@ -71,17 +68,3 @@ class ProductKardexWizard(models.TransientModel):
             'res_model': 'temp.kardex.line',
             'domain': [],
         }
-
-class TempKardexLine(models.TransientModel):
-    _name = 'temp.kardex.line'
-    _description = 'Línea Temporal de Kardex'
-
-    product_id = fields.Many2one('product.product', string='Producto')
-    date = fields.Datetime(string='Fecha')
-    location_id = fields.Many2one('stock.location', string='Origen')
-    location_dest_id = fields.Many2one('stock.location', string='Destino')
-    product_uom_qty = fields.Float(string='Cantidad')
-    remaining_qty = fields.Float(string='Cantidad Restante')
-    reference = fields.Char(string='Referencia')
-    picking_id = fields.Many2one('stock.picking', string='Picking')
-    type = fields.Selection([('in', 'In'), ('out', 'Out')], string='Type')
