@@ -9,7 +9,6 @@
                     <field name="product_id"/>
                     <field name="date_start"/>
                     <field name="date_end"/>
-                   
                 </group>
                 <group>
                     <field name="remaining_qty" readonly="1"/>
