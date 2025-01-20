@@ -1,6 +1,6 @@
 {
     'name': 'Kardex de Productos',
-    'version': '16.0',
+    'version': '17.0',
     'summary': 'Wizard para visualizar movimientos de Kardex',
     'description': 'Este módulo permite visualizar los movimientos de Kardex de un producto en un rango de fechas.',
     'category': 'Inventory',
@@ -15,17 +15,12 @@
         'views/menu_views.xml',
         'views/kardex_tracking_views.xml'
     ],
-<<<<<<< HEAD
    'images': [
     'static/description/banner.gif',
     'static/description/1.png',
      'static/description/2.png',
       'static/description/3.png'
     ],
-=======
-    'images':['static/description/banner.gif',
-              'static/description/fondoo.png'],
->>>>>>> 16.0
     'installable': True,
     'application': False,
     
