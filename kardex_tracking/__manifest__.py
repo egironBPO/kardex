@@ -5,7 +5,7 @@
     'description': 'Este módulo permite visualizar los movimientos de Kardex de un producto en un rango de fechas.',
     'category': 'Inventory',
     'author': 'Elder Armando Giron',
-    'price': '35',
+    'price': '35.99',
     'currency': 'USD',
     'website': '',
     'depends': ['stock'],
