@@ -1,0 +1,27 @@
+{
+    'name': 'Kardex de Productos',
+    'version': "18.0.1.0.0",
+    'summary': 'Wizard para visualizar movimientos de Kardex',
+    'description': 'Este módulo permite visualizar los movimientos de Kardex de un producto en un rango de fechas.',
+    'category': 'Inventory',
+    'author': 'Elder Armando Giron',
+    'price': '35',
+    'currency': 'USD',
+    'website': '',
+    'depends': ['stock'],
+    'data': [
+        'security/ir.model.access.csv',
+        'views/product_kardex_wizard_views.xml',
+        'views/menu_views.xml',
+        'views/kardex_tracking_views.xml'
+    ],
+   'images': [
+    'static/description/banner.gif',
+    'static/description/1.png',
+     'static/description/2.png',
+      'static/description/3.png'
+    ],
+    'installable': True,
+    'application': False,
+    
+}
